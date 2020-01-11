@@ -1,0 +1,13 @@
+- title: キメる Ruby
+  event: C97
+  date: 2019-12-31
+  repo: C97
+  tags:
+    - Ruby
+- title: Ruby on AWS Lambda
+  event: 技術書典6
+  date: 2019-04-14
+  repo: TechBookFes06
+  tags:
+    - Ruby
+    - AWS Lambda
