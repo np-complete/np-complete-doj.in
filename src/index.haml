@@ -8,15 +8,30 @@
   %body
     %section.section
       .container
-        %h1.title 同人サークル NP-complete
-        %ul
-          %li
-            2019-12-31
-            C97 キメる Ruby
-            <a href="https://np-complete-books.s3.amazonaws.com/pdf/C97.pdf">[pdf]</a>
-            <a href="https://github.com/np-complete/c97">[source]</a>
-          %li
-            2019-04-14
-            技術書典6 Ruby on AWS Lambda
-            <a href="https://np-complete-books.s3.amazonaws.com/pdf/TechBookFes06.pdf">[pdf]</a>
-            <a href="https://github.com/np-complete/TechBookFes06">[source]</a>
+        %h1.title NP-complete
+        %p.subtitle プログラミング・技術書系同人サークル
+
+        %table.table
+          %thead
+            %tr
+              %th 発行日
+              %th イベント
+              %th タイトル
+              %th{ colspan: 2 } リンク
+          %tbody
+            %tr
+              %td 2019-12-31
+              %td C97
+              %td キメる Ruby
+              %td
+                %a{ href: 'https://np-complete-books.s3.amazonaws.com/pdf/C97.pdf' } [pdf]
+              %td
+                %a{ href: 'https://github.com/np-complete/c97' } [source]
+            %tr
+              %td 2019-04-14
+              %td 技術書典6
+              %td Ruby on AWS Lambda
+              %td
+                %a{ href: 'https://np-complete-books.s3.amazonaws.com/pdf/TechBookFes06.pdf' } [pdf]
+              %td
+                %a{ href: 'https://github.com/np-complete/TechBookFes06' } [source]
