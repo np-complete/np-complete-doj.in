@@ -27,7 +27,7 @@ module.exports = {
       filename: 'css/bundle.css',
     }),
     new HtmlWebpackPlugin({
-      template: '!!html-loader!src/index.html',
+      template: '!!haml-loader!src/index.haml',
     }),
   ],
 };
