@@ -38,4 +38,5 @@ module.exports = {
       template: '!!haml-loader!src/index.haml',
     }),
   ],
+  devtool: 'source-map',
 };
