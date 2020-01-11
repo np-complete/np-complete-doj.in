@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-python@v1
+      - uses: jakejarvis/s3-sync-action@master
         with:
-          python-version: 3.8
-      - run: pip install awscli
-      - run: aws s3 sync public/* s3://np-complete-doj.in/ --acl public-read
+          args: --acl public-read --follow-symlinks --delete
         env:
+          AWS_S3_BUCKET: np-complete-doj.in
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          SOURCE_DIR: public
