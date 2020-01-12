@@ -22,6 +22,8 @@ module.exports = {
     'react',
   ],
   rules: {
+    'no-shadow': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js']}],
+    'react/prop-types': 'off',
   },
 };
