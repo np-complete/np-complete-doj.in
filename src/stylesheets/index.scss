@@ -1,2 +1,11 @@
 @charset "utf-8";
 @import "~bulma/bulma";
+@import url("https://fonts.googleapis.com/css?family=Crete+Round|Noto+Serif+JP:600&display=swap");
+
+#title {
+  font-family: 'Crete Round', serif;
+}
+
+#subtitle {
+  font-family: 'Noto Serif JP', serif;
+}
