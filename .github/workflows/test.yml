@@ -21,3 +21,13 @@ jobs:
       - run: yarn install
       - name: build
         run: yarn webpack --mode development
+  cloudformation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: dummy_key
+          aws-secret-access-key: dummy_secret
+          aws-region: us-west-2
+      - run: aws cloudformation validate-template --template-body file://$(pwd)/template.yml
