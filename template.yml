@@ -1,0 +1,14 @@
+Resource:
+  WebsiteBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: np-complete-doj.in
+      AccessControl: PublicRead
+      WebsiteConfiguration:
+        IndexDocument: index.html
+    DeletionPolicy: Retain
+Outputs:
+  NpCompleteWebsiteBucket:
+    Value: !Ref WebsiteBucket
+  NpCompleteWebsiteURL:
+    Value: !GetAtt WebsiteBucket.WebsiteURL
