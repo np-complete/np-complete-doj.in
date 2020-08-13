@@ -17,45 +17,6 @@ Resources:
         - DomainName: np-complete-doj.in
           HostedZoneId: Z1UV67RHS6GARQ
       ValidationMethod: DNS
-  CloudFront:
-    Type: AWS::CloudFront::Distribution
-    Properties:
-      DistributionConfig:
-        Aliases:
-          - np-complete-doj.in
-        DefaultRootObject: index.html
-        Enabled: true
-        HttpVersion: http2
-        IPV6Enabled: true
-        Origins:
-          - Id: s3
-            DomainName: !GetAtt WebsiteBucket.DomainName
-            S3OriginConfig:
-              OriginAccessIdentity: !Ref OriginAccessIdentity
-        DefaultCacheBehavior:
-          TargetOriginId: s3
-          ViewerProtocolPolicy: redirect-to-https
-          Compress: true
-        ViewerCertificate:
-          AcmCertificateArn: !Ref Certificate
-          MinimumProtocolVersion: TLSv1.2_2019
-          SslSupportMethod: sni-only
-  OriginAccessIdentity:
-    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
-    Properties:
-      CloudFrontOriginAccessIdentityConfig:
-        Comment: access-identity-np-complete-doj.in
-  BucketPolicy:
-    Type: AWS::S3::BucketPolicy
-    Properties:
-      Bucket: !Ref WebsiteBucket
-      PolicyDocument:
-        Statement:
-          - Action: s3::GetObject
-            Effect: Allow
-            Resource: !Join [ '/', [!GetAtt WebsiteBucket.Arn, '*']]
-            Principal:
-              CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
 
 Outputs:
   NpCompleteWebsiteBucket:
