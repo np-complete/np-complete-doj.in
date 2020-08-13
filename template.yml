@@ -14,8 +14,8 @@ Resources:
       SubjectAlternativeNames:
         - '*.np-complete-doj.in'
       DomainValidationOptions:
-        DomainName: np-complete-doj.in
-        HostedZoneId: Z1UV67RHS6GARQ
+        - DomainName: np-complete-doj.in
+          HostedZoneId: Z1UV67RHS6GARQ
 Outputs:
   NpCompleteWebsiteBucket:
     Value: !Ref WebsiteBucket
