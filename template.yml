@@ -36,7 +36,7 @@ Resources:
           Compress: true
         ViewerCertificate:
           AcmCertificateArn: !Ref Certificate
-          MinumumProtocolVersion: TLSv1.2_2019
+          MinimumProtocolVersion: TLSv1.2_2019
           SslSupportMethod: sni-only
 
 Outputs:
