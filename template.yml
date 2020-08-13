@@ -16,6 +16,7 @@ Resources:
       DomainValidationOptions:
         - DomainName: np-complete-doj.in
           HostedZoneId: Z1UV67RHS6GARQ
+      ValidationMethod: DNS
 Outputs:
   NpCompleteWebsiteBucket:
     Value: !Ref WebsiteBucket
