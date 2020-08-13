@@ -18,7 +18,7 @@ Resources:
           HostedZoneId: Z1UV67RHS6GARQ
       ValidationMethod: DNS
   CloudFront:
-    Type: Aws::CloudFront::Distribution
+    Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         Aliases:
@@ -38,6 +38,7 @@ Resources:
           AcmCertificateArn: !Ref Certificate
           MinumumProtocolVersion: TLSv1.2_2019
           SslSupportMethod: sni-only
+
 Outputs:
   NpCompleteWebsiteBucket:
     Value: !Ref WebsiteBucket
