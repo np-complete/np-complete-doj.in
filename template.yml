@@ -12,7 +12,7 @@ Resources:
     Properties:
       DomainName: np-complete-doj.in
       SubjectAlternativeNames:
-        - *.np-complete-doj.in
+        - '*.np-complete-doj.in'
       DomainValidationOption:
         DomainName: np-complete-doj.in
         HostedZoneId: Z1UV67RHS6GARQ
