@@ -30,6 +30,8 @@ Resources:
         Origins:
           - Id: s3
             DomainName: !GetAtt WebsiteBucket.DomainName
+            S3OriginConfig:
+              OriginAccessIdentity: !Ref OriginAccessIdentity
         DefaultCacheBehavior:
           TargetOriginId: s3
           ViewerProtocolPolicy: redirect-to-https
@@ -38,6 +40,22 @@ Resources:
           AcmCertificateArn: !Ref Certificate
           MinimumProtocolVersion: TLSv1.2_2019
           SslSupportMethod: sni-only
+  OriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: access-identity-np-complete-doj.in
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Statement:
+          - Action: s3::GetObject
+            Effect: Allow
+            Resource: !Join [ '/', [!GetAtt WebsiteBucket.Arn, '*']]
+            Principal:
+              CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
 
 Outputs:
   NpCompleteWebsiteBucket:
