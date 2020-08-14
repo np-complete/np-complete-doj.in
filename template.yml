@@ -22,6 +22,17 @@ Resources:
     Properties:
       CloudFrontOriginAccessIdentityConfig:
         Comment: access-identity-for-np-complete-doj.in
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref WebsiteBucket
+      PolicyDocument:
+        Statement:
+          - Action: s3::GetObject
+            Effect: Allow
+            Resource: !Join [ '/', [ !GetAtt WebsiteBucket.Arn, '*' ]]
+            Principal:
+              CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
 
 Outputs:
   NpCompleteWebsiteBucket:
