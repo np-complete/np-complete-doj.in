@@ -17,6 +17,11 @@ Resources:
         - DomainName: np-complete-doj.in
           HostedZoneId: Z1UV67RHS6GARQ
       ValidationMethod: DNS
+  OriginAccessIdentity:
+    Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
+    Properties:
+      CloudFrontOriginAccessIdentityConfig:
+        Comment: access-identity-for-np-complete-doj.in
 
 Outputs:
   NpCompleteWebsiteBucket:
