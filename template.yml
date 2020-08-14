@@ -31,7 +31,7 @@ Resources:
           - Id: s3
             DomainName: !GetAtt WebsiteBucket.DomainName
             S3OriginConfig:
-              OriginAccessIdentity: !Ref OriginAccessIdentity
+              OriginAccessIdentity: !Join [ '/', [ 'origin-access-identity', 'cloudfront', !Ref OriginAccessIdentity ]]
         DefaultCacheBehavior:
           TargetOriginId: s3
           ViewerProtocolPolicy: redirect-to-https
