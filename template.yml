@@ -28,7 +28,7 @@ Resources:
       Bucket: !Ref WebsiteBucket
       PolicyDocument:
         Statement:
-          - Action: s3::GetObject
+          - Action: s3:GetObject
             Effect: Allow
             Resource: !Join [ '/', [ !GetAtt WebsiteBucket.Arn, '*' ]]
             Principal:
