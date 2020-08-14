@@ -36,6 +36,10 @@ Resources:
           TargetOriginId: s3
           ViewerProtocolPolicy: redirect-to-https
           Compress: true
+          ForwardedValues:
+            Cookies:
+              Forward: none
+            QueryString: false
         ViewerCertificate:
           AcmCertificateArn: !Ref Certificate
           MinimumProtocolVersion: TLSv1.2_2019
