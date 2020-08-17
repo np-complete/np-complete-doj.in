@@ -9,10 +9,6 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: np-complete-doj.in
-      AccessControl: PublicRead
-      WebsiteConfiguration:
-        IndexDocument: index.html
-    DeletionPolicy: Retain
   CloudFront:
     Type: AWS::CloudFront::Distribution
     Properties:
