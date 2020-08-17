@@ -1,6 +1,8 @@
 Parameters:
   CertArn:
     Type: String
+  HostedZoneId:
+    Type: String
 
 Resources:
   WebsiteBucket:
@@ -57,7 +59,7 @@ Resources:
   RecordSet:
     Type: AWS::Route53::RecordSetGroup
     Properties:
-      HostedZoneName: np-complete-doj.in
+      HostedZoneId: !Ref HostedZoneId
       RecordSets:
         - Name: np-complete-doj.in
           Type: A
