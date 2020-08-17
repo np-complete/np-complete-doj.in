@@ -1,3 +1,6 @@
+Parameters:
+  CertArn:
+    Type: String
 Resources:
   WebsiteBucket:
     Type: AWS::S3::Bucket
@@ -7,16 +10,6 @@ Resources:
       WebsiteConfiguration:
         IndexDocument: index.html
     DeletionPolicy: Retain
-  Certificate:
-    Type: AWS::CertificateManager::Certificate
-    Properties:
-      DomainName: np-complete-doj.in
-      SubjectAlternativeNames:
-        - '*.np-complete-doj.in'
-      DomainValidationOptions:
-        - DomainName: np-complete-doj.in
-          HostedZoneId: Z1UV67RHS6GARQ
-      ValidationMethod: DNS
   CloudFront:
     Type: AWS::CloudFront::Distribution
     Properties:
@@ -41,7 +34,7 @@ Resources:
               Forward: none
             QueryString: false
         ViewerCertificate:
-          AcmCertificateArn: !Ref Certificate
+          AcmCertificateArn: !Ref CertArn
           MinimumProtocolVersion: TLSv1.2_2019
           SslSupportMethod: sni-only
   OriginAccessIdentity:
