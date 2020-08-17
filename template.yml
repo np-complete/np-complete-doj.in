@@ -1,6 +1,7 @@
 Parameters:
   CertArn:
     Type: String
+
 Resources:
   WebsiteBucket:
     Type: AWS::S3::Bucket
@@ -53,6 +54,21 @@ Resources:
             Resource: !Join [ '/', [ !GetAtt WebsiteBucket.Arn, '*' ]]
             Principal:
               CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
+  RecordSet:
+    Type: AWS::Route53::RecordSetGroup
+    Properties:
+      HostedZoneName: np-complete-doj.in
+      RecordSets:
+        - Name: np-complete-doj.in
+          Type: A
+          AliasTarget:
+            DNSName: !GetAtt CloudFront.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2
+        - Name: np-complete-doj.in
+          Type: AAAA
+          AliasTarget:
+            DNSName: !GetAtt CloudFront.DomainName
+            HostedZoneId: Z2FDTNDATAQYW2
 
 Outputs:
   NpCompleteWebsiteBucket:
