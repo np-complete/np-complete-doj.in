@@ -26,8 +26,16 @@
     "js-yaml-loader": "^1.2.2",
     "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.13.0",
+    "prettier": "^2.1.1",
     "sass-loader": "^10.0.1",
     "style-loader": "^1.1.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   }
