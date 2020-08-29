@@ -24,9 +24,9 @@
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "js-yaml-loader": "^1.2.2",
-    "mini-css-extract-plugin": "^0.10.0",
+    "mini-css-extract-plugin": "^0.11.0",
     "node-sass": "^4.13.0",
-    "sass-loader": "^9.0.3",
+    "sass-loader": "^10.0.1",
     "style-loader": "^1.1.2",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
