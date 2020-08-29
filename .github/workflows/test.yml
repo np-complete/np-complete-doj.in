@@ -9,8 +9,8 @@ jobs:
         with:
           node-version: '12.x'
       - run: yarn install
-      - name: lint
-        run: yarn eslint .
+      - run: yarn eslint .
+      - run: yarn stylelint 'src/**/*.scss'
   build:
     runs-on: ubuntu-latest
     steps:
