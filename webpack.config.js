@@ -43,5 +43,8 @@ module.exports = {
       template: '!!haml-loader!src/index.haml',
     }),
   ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+  },
   devtool: 'source-map',
 };
