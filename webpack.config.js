@@ -44,7 +44,15 @@ module.exports = {
     }),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    client: {
+      overlay: {
+        errors: true,
+        warnings: false,
+      },
+    },
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
   },
   devtool: 'source-map',
 };
