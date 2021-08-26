@@ -37,3 +37,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
       - run: aws s3 sync dist s3://np-complete-doj.in --acl public-read --follow-symlinks --delete
+      - run: aws cloudfront create-invalidation --distribution-id "E1PQM4ZYM01TVA"  --paths "/*"
