@@ -29,6 +29,24 @@
   tags:
     - Python
     - 機械学習
+- title: 超実践Git
+  events:
+    - name: C93
+      date: 2017-12-29
+  repo: C93
+  tags:
+    - Git
+    - 怠惰
+- title: マストドンがんばるどん
+  events:
+    - name: C92
+      date: 2017-08-11
+    - name: 技術書典3
+      date: 2017-10-22
+  repo: C92
+  tags:
+    - Ruby
+    - Mastodon
 - title: バベルフレンズ
   events:
     - name: 技術書典2
