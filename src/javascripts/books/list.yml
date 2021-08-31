@@ -1,39 +1,47 @@
 - title: キマる Ruby
-  event: C97
-  date: 2019-12-31
+  events:
+    - name: C97
+      date: 2019-12-31
   repo: C97
   tags:
     - Ruby
 - title: Ruby on AWS Lambda
-  event: 技術書典6
-  date: 2019-04-14
+  events:
+    - name: 技術書典6
+      date: 2019-04-14
   repo: TechBookFes06
   tags:
     - Ruby
     - AWS Lambda
 - title: RubyistでもAIがしたい!
-  event: C95
-  date: 2018-12-30
+  events:
+    - name: C95
+      date: 2018-12-30
   repo: C95
   tags:
     - Ruby
     - 機械学習
 - title: WebエンジニアだけどAIがしたい!
-  event: C94
-  date: 2018-08-10
+  events:
+    - name: C94
+      date: 2018-08-10
   repo: C94
   tags:
     - Python
     - 機械学習
 - title: バベルフレンズ
-  event: 技術書典2
-  date: 2017-04-09
+  events:
+    - name: 技術書典2
+      date: 2017-04-09
+    - name: 超技術書典
+      date: 2017-04-29
   repo: TechBookFes02
   tags:
     - JavaScript
 - title: 技術同人誌の環境構築
-  event: 技術書典1
-  date: 2016-06-25
+  events:
+    - name: 技術書典1
+      date: 2016-06-25
   repo: TechBookFes01
   tags:
     - 同人活動
