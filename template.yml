@@ -23,7 +23,15 @@ Resources:
           - Id: s3
             DomainName: !GetAtt WebsiteBucket.DomainName
             S3OriginConfig:
-              OriginAccessIdentity: !Join [ '/', [ 'origin-access-identity', 'cloudfront', !Ref OriginAccessIdentity ]]
+              OriginAccessIdentity:
+                !Join [
+                  '/',
+                  [
+                    'origin-access-identity',
+                    'cloudfront',
+                    !Ref OriginAccessIdentity,
+                  ],
+                ]
         DefaultCacheBehavior:
           TargetOriginId: s3
           ViewerProtocolPolicy: redirect-to-https
@@ -34,7 +42,7 @@ Resources:
             QueryString: false
         ViewerCertificate:
           AcmCertificateArn: !Ref CertArn
-          MinimumProtocolVersion: TLSv1.2_2019
+          MinimumProtocolVersion: TLSv1.2_2021
           SslSupportMethod: sni-only
   OriginAccessIdentity:
     Type: AWS::CloudFront::CloudFrontOriginAccessIdentity
@@ -49,7 +57,7 @@ Resources:
         Statement:
           - Action: s3:GetObject
             Effect: Allow
-            Resource: !Join [ '/', [ !GetAtt WebsiteBucket.Arn, '*' ]]
+            Resource: !Join ['/', [!GetAtt WebsiteBucket.Arn, '*']]
             Principal:
               CanonicalUser: !GetAtt OriginAccessIdentity.S3CanonicalUserId
   RecordSet:
