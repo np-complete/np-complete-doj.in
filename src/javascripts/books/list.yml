@@ -1,3 +1,10 @@
+- title: 宇宙から住所の概念を消し去りたい
+  events:
+    - name: C99
+      date: 2021-12-31
+  repo: C99
+  tags:
+     - Security
 - title: キマる Ruby
   events:
     - name: C97
