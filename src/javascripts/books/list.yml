@@ -1,3 +1,11 @@
+- title: Monitoring AKA-CHAN
+  events:
+    - name: C100
+      date: 2022-08-13
+  repo: C100
+  tags:
+    - Joke
+    - IoT
 - title: 宇宙から住所の概念を消し去りたい
   events:
     - name: C99
