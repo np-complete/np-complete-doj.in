@@ -1,3 +1,10 @@
+- title: いまさらはじめるマストドン
+  events:
+    - name: C101
+      date: 2022-12-31
+  repo: C101
+  tags:
+    - Mastodon
 - title: Monitoring AKA-CHAN
   events:
     - name: C100
