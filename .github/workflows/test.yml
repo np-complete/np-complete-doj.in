@@ -5,11 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: node-version
-        run: echo "::set-output name=NODE_VERSION::$(cat .node-version)"
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.node-version.outputs.NODE_VERSION }}
+          node-version-file: .node-version
+          cache: yarn
       - run: yarn install
       - run: yarn eslint .
       - run: yarn stylelint 'src/**/*.scss'
@@ -17,10 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - id: node-version
-        run: echo "::set-output name=NODE_VERSION::$(cat .node-version)"
       - uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.node-version.outputs.NODE_VERSION }}
+          node-version-file: .node-version
+          cache: yarn
       - run: yarn install
       - run: yarn webpack --mode development
