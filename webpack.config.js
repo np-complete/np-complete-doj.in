@@ -40,7 +40,7 @@ module.exports = {
       filename: 'css/bundle.css',
     }),
     new HtmlWebpackPlugin({
-      template: '!!haml-loader!src/index.haml',
+      template: 'src/index.html',
     }),
   ],
   devServer: {
