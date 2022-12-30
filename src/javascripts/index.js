@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import Books from './books';
 
 const Main = () => (
@@ -13,5 +13,6 @@ const Main = () => (
 );
 
 document.addEventListener('DOMContentLoaded', () => {
-  ReactDOM.render(<Main />, document.querySelector('#mount'));
+  const elm = document.querySelector('#mount');
+  createRoot(elm).render(<Main />);
 });
