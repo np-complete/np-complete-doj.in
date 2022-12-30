@@ -23,6 +23,10 @@ module.exports = {
   ],
   rules: {
     'no-shadow': 'off',
+    'react/function-component-definition': ['error', {
+      namedComponents: 'arrow-function',
+      unnamedComponents: 'arrow-function',
+    }],
     'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
     'react/prop-types': 'off',
   },
