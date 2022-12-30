@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "dateformat": "^4.5.1",
+    "dateformat": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
