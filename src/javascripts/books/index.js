@@ -11,7 +11,7 @@ export default () => {
     setTags((tags) => (tags.includes(tag) ? tags.filter((x) => x !== tag) : tags.concat(tag)));
   };
 
-  const context = { tags, toggleTag };
+  const context = React.useMemo(() => ({ tags, toggleTag }), [tags, toggleTag]);
 
   React.useEffect(() => {
     if (tags.length > 0) {
