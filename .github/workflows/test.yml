@@ -22,3 +22,15 @@ jobs:
           cache: yarn
       - run: yarn install
       - run: yarn webpack --mode development
+  terraform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: |
+          aws configure set aws_access_key_id ${{ secrets.AWS_ACCESS_KEY_ID }} --profile default
+          aws configure set aws_secret_access_key ${{ secrets.AWS_SECRET_ACCESS_KEY }} --profile default
+      - uses: hashicorp/setup-terraform@v1
+      - run: |
+          terraform init
+          terraform fmt
+          terraform validate
