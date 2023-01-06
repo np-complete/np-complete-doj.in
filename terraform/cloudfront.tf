@@ -25,6 +25,7 @@ resource "aws_cloudfront_distribution" "np-complete" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
+  aliases             = ["np-complete-doj.in"]
 
   default_cache_behavior {
     target_origin_id       = local.s3_origin_id
