@@ -5,10 +5,17 @@ resource "aws_s3_bucket" "np-complete-website" {
   }
 }
 
+resource "aws_s3_bucket_public_access_block" "np-complete-website" {
+  bucket                  = aws_s3_bucket.np-complete-website.id
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
 resource "aws_s3_bucket_policy" "np-complete-website" {
   bucket = aws_s3_bucket.np-complete-website.id
   policy = data.aws_iam_policy_document.np-complete-website.json
-
 }
 
 data "aws_iam_policy_document" "np-complete-website" {
