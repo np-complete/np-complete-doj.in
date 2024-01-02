@@ -33,7 +33,7 @@
     "stylelint": "^15.0.0",
     "stylelint-config-prettier": "^9.0.0",
     "stylelint-config-recommended-scss": "^14.0.0",
-    "stylelint-config-sass-guidelines": "^10.0.0",
+    "stylelint-config-sass-guidelines": "^11.0.0",
     "stylelint-order": "^6.0.0",
     "stylelint-prettier": "^4.0.0",
     "stylelint-scss": "^6.0.0",
