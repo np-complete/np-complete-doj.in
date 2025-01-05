@@ -41,5 +41,5 @@
     "webpack-cli": "^6.0.0",
     "webpack-dev-server": "^5.0.0"
   },
-  "packageManager": "yarn@4.5.3"
+  "packageManager": "yarn@4.6.0"
 }
