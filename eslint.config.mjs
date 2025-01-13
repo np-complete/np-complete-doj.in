@@ -19,27 +19,22 @@ export default [
   {
     ignores: ['**/node_modules/', '**/dist/', '!**/.*'],
   },
-  ...compat.extends('plugin:react/recommended', 'airbnb'),
+  ...compat.extends('airbnb'),
   {
-    plugins: {
-      react,
-    },
     languageOptions: {
       globals: {
         ...globals.browser,
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly',
       },
       ecmaVersion: 'latest',
       sourceType: 'module',
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: true,
-        },
-      },
     },
     rules: {
       'no-shadow': 'off',
+    },
+  },
+  {
+    ...react.configs.flat.recommended,
+    rules: {
       'react/function-component-definition': ['error', {
         namedComponents: 'arrow-function',
         unnamedComponents: 'arrow-function',
@@ -49,4 +44,5 @@ export default [
       }],
       'react/prop-types': 'off',
     },
-  }];
+  },
+];
