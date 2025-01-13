@@ -35,7 +35,7 @@ export default () => {
         </thead>
         <tbody>
           {books.map((book) => (
-            <Book book={book} />
+            <Book book={book} key={book.repo} />
           ))}
         </tbody>
       </table>

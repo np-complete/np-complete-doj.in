@@ -5,7 +5,7 @@ import Tag from './tag';
 export default ({ book }) => (
   <>
     {book.events.map((event, index) => (
-      <tr>
+      <tr key={event.name}>
         <td>{dateformat(event.date, 'yyyy-mm-dd')}</td>
         <td>{event.name}</td>
         {index === 0 && (
@@ -14,7 +14,7 @@ export default ({ book }) => (
             <td rowSpan={book.events.length}>
               <div className="buttons">
                 {book.tags.map((tag) => (
-                  <Tag tag={tag} />
+                  <Tag tag={tag} key={tag} />
                 ))}
               </div>
             </td>
