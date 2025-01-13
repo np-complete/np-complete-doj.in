@@ -35,11 +35,13 @@ export default [
   {
     ...react.configs.flat.recommended,
     rules: {
+      ...react.configs.flat.recommended.rules,
+      'react/display-name': 'off',
       'react/function-component-definition': ['error', {
         namedComponents: 'arrow-function',
         unnamedComponents: 'arrow-function',
       }],
-      'react/jsx-filename-extension': [1, {
+      'react/jsx-filename-extension': ['error', {
         extensions: ['.js'],
       }],
       'react/prop-types': 'off',
