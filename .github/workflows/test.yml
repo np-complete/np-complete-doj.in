@@ -24,3 +24,9 @@ jobs:
           cache: yarn
       - run: yarn install
       - run: yarn webpack --mode development
+  tflint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: terraform-linters/setup-tflint@v4
+      - run: tflint --chdir terraform
