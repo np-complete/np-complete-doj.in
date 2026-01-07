@@ -2,21 +2,21 @@
   events:
     - name: C102
       date: 2023-08-12
-  repo: C102
+  repo: c102
   tags:
     - リモートワーク
 - title: いまさらはじめるマストドン
   events:
     - name: C101
       date: 2022-12-31
-  repo: C101
+  repo: c101
   tags:
     - Mastodon
 - title: Monitoring AKA-CHAN
   events:
     - name: C100
       date: 2022-08-13
-  repo: C100
+  repo: c100
   tags:
     - Joke
     - IoT
@@ -24,14 +24,14 @@
   events:
     - name: C99
       date: 2021-12-31
-  repo: C99
+  repo: c99
   tags:
      - Security
 - title: キマる Ruby
   events:
     - name: C97
       date: 2019-12-31
-  repo: C97
+  repo: c97
   tags:
     - Ruby
 - title: Ruby on AWS Lambda
@@ -46,7 +46,7 @@
   events:
     - name: C95
       date: 2018-12-30
-  repo: C95
+  repo: c95
   tags:
     - Ruby
     - 機械学習
@@ -54,7 +54,7 @@
   events:
     - name: C94
       date: 2018-08-10
-  repo: C94
+  repo: c94
   tags:
     - Python
     - 機械学習
@@ -62,7 +62,7 @@
   events:
     - name: C93
       date: 2017-12-29
-  repo: C93
+  repo: c93
   tags:
     - Git
     - 怠惰
@@ -72,7 +72,7 @@
       date: 2017-08-11
     - name: 技術書典3
       date: 2017-10-22
-  repo: C92
+  repo: c92
   tags:
     - Ruby
     - Mastodon
