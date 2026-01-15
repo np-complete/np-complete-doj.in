@@ -85,6 +85,13 @@
   repo: TechBookFes02
   tags:
     - JavaScript
+- title: Chrome Extensionで快適ブラウザ生活
+  events:
+    - name: C91
+      date: 2016-12-29
+  repo: c91
+  tags:
+    - JavaScript
 - title: 技術同人誌の環境構築
   events:
     - name: 技術書典1
