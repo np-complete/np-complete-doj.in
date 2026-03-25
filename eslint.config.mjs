@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 import react from 'eslint-plugin-react';
 import globals from 'globals';
 import path from 'node:path';
@@ -41,10 +39,17 @@ export default [
         namedComponents: 'arrow-function',
         unnamedComponents: 'arrow-function',
       }],
-      'react/jsx-filename-extension': ['error', {
-        extensions: ['.js'],
-      }],
+      'react/jsx-filename-extension': 'error',
       'react/prop-types': 'off',
+    },
+  },
+  {
+    files: ['*.config.mjs'],
+    rules: {
+      'import/no-unresolved': 'off',
+      'import/no-extraneous-dependencies': ['error', {
+        devDependencies: true,
+      }],
     },
   },
 ];
