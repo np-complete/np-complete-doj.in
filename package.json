@@ -28,7 +28,7 @@
     "prettier": "3.4.2",
     "sass": "1.83.4",
     "stylelint": "16.13.0",
-    "stylelint-config-recommended-scss": "14.1.0",
+    "stylelint-config-recommended-scss": "17.0.0",
     "stylelint-config-sass-guidelines": "12.1.0",
     "stylelint-order": "6.0.4",
     "stylelint-prettier": "5.0.2",
