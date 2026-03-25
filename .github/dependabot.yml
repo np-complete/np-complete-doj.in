@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    # versioning-strategy: increase will keep the pinning if current version is pinned
+    versioning-strategy: increase
