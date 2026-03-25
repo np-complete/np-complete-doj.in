@@ -33,7 +33,7 @@
     "stylelint-order": "6.0.4",
     "stylelint-prettier": "5.0.2",
     "stylelint-scss": "6.10.1",
-    "vite": "6.0.7"
+    "vite": "6.4.1"
   },
   "packageManager": "yarn@4.13.0"
 }
