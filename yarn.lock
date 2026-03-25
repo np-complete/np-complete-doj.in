@@ -1322,10 +1322,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bulma@npm:1.0.2":
-  version: 1.0.2
-  resolution: "bulma@npm:1.0.2"
-  checksum: 10c0/294c28a445366074431c56624eea05cdb156537064c2af75002ef8d49bcb336c451fbb4ce81337cf085228247f81b27df418dd5290d6b6276c1aaa40ad4bbf64
+"bulma@npm:1.0.4":
+  version: 1.0.4
+  resolution: "bulma@npm:1.0.4"
+  checksum: 10c0/5a9bf48c6681181fce6fe06d1744272938cc81d4356314d9c4eee3ddbd1fac6ac678cb640b2fe58aec47f907ff273231b246b9cd66d1894b40c3a89a68fb3a68
   languageName: node
   linkType: hard
 
@@ -4189,7 +4189,7 @@ __metadata:
     "@eslint/js": "npm:9.18.0"
     "@modyfi/vite-plugin-yaml": "npm:1.1.1"
     "@vitejs/plugin-react": "npm:4.3.4"
-    bulma: "npm:1.0.2"
+    bulma: "npm:1.0.4"
     classnames: "npm:2.5.1"
     dateformat: "npm:5.0.3"
     eslint: "npm:9.18.0"
