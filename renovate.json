@@ -1,7 +1,41 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
+    "config:recommended",
+    ":pinAllAssociations",
+    ":separateMajorReleases",
+    ":combinePatchMinorReleases",
+    ":prImmediately",
+    ":label(dependencies)"
   ],
-  "rangeStrategy": "pin"
+  "rangeStrategy": "pin",
+  "timezone": "Asia/Tokyo",
+  "schedule": ["at any time"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["^eslint", "^stylelint", "@eslint/"],
+      "groupName": "lint-dependencies"
+    },
+    {
+      "matchPackagePatterns": ["^react", "react-dom"],
+      "groupName": "react-monorepo"
+    },
+    {
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "groupName": "terraform"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "groupName": "security-updates"
+  },
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "schedule": ["before 5am on monday"]
+  }
 }
