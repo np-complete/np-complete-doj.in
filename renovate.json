@@ -1,8 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":pinAllAssociations",
+    "config:best-practices",
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":prImmediately",
@@ -11,14 +10,12 @@
   "rangeStrategy": "pin",
   "timezone": "Asia/Tokyo",
   "schedule": ["at any time"],
+  "minimumReleaseAge": "3 days",
   "packageRules": [
     {
-      "matchPackagePatterns": ["^eslint", "^stylelint", "@eslint/"],
-      "groupName": "lint-dependencies"
-    },
-    {
-      "matchPackagePatterns": ["^react", "react-dom"],
-      "groupName": "react-monorepo"
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     },
     {
       "matchManagers": ["github-actions"],
