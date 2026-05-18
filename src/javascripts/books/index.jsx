@@ -3,7 +3,7 @@ import Context from './context'
 import Book from './book'
 import list from './list.yml'
 
-export default () => {
+const Books = () => {
   const [books, setBooks] = React.useState(list)
   const [tags, setTags] = React.useState([])
 
@@ -46,3 +46,5 @@ export default () => {
     </Context.Provider>
   )
 }
+
+export default Books
