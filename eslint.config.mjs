@@ -1,63 +1,18 @@
-import react from 'eslint-plugin-react'
-import globals from 'globals'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-import js from '@eslint/js'
-import { FlatCompat } from '@eslint/eslintrc'
+import antfu from '@antfu/eslint-config'
 
-const filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(filename)
-const compat = new FlatCompat({
-  baseDirectory: dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-})
-
-export default [
-  {
-    ignores: ['**/node_modules/', '**/dist/', '!**/.*'],
-  },
-  ...compat.extends('airbnb'),
-  {
-    languageOptions: {
-      globals: {
-        ...globals.browser,
+export default antfu({
+  react: true,
+  formatters: true,
+  rules: {
+    'no-shadow': 'off',
+    'react/display-name': 'off',
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
       },
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    },
-    rules: {
-      'no-shadow': 'off',
-      semi: ['error', 'never'],
-      'no-extra-semi': 'error',
-    },
+    ],
+    'react/prop-types': 'off',
   },
-  {
-    ...react.configs.flat.recommended,
-    rules: {
-      ...react.configs.flat.recommended.rules,
-      'react/display-name': 'off',
-      'react/function-component-definition': [
-        'error',
-        {
-          namedComponents: 'arrow-function',
-          unnamedComponents: 'arrow-function',
-        },
-      ],
-      'react/jsx-filename-extension': 'error',
-      'react/prop-types': 'off',
-    },
-  },
-  {
-    files: ['*.config.mjs'],
-    rules: {
-      'import/no-unresolved': 'off',
-      'import/no-extraneous-dependencies': [
-        'error',
-        {
-          devDependencies: true,
-        },
-      ],
-    },
-  },
-]
+})
