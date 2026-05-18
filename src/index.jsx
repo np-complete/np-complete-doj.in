@@ -1,2 +1,2 @@
-import './javascripts/index.jsx';
-import './stylesheets/index.scss';
+import './javascripts/index.jsx'
+import './stylesheets/index.scss'
