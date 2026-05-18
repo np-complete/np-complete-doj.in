@@ -1,4 +1,6 @@
 import React from 'react'
+import Book from './book'
+import Context from './context'
 import list from './list.yml'
 
 const Books = () => {

@@ -1,4 +1,5 @@
 import dateformat from 'dateformat'
+import Tag from './tag'
 
 const Book = ({ book }) => (
   <>
