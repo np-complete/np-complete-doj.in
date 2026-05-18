@@ -1,6 +1,4 @@
 import React from 'react'
-import Context from './context'
-import Book from './book'
 import list from './list.yml'
 
 const Books = () => {
@@ -8,8 +6,8 @@ const Books = () => {
   const [tags, setTags] = React.useState([])
 
   const toggleTag = (tag) => {
-    setTags((tags) =>
-      tags.includes(tag) ? tags.filter((x) => x !== tag) : tags.concat(tag),
+    setTags(tags =>
+      tags.includes(tag) ? tags.filter(x => x !== tag) : tags.concat(tag),
     )
   }
 
@@ -18,7 +16,7 @@ const Books = () => {
   React.useEffect(() => {
     if (tags.length > 0) {
       setBooks(
-        list.filter((book) => tags.every((tag) => book.tags.includes(tag))),
+        list.filter(book => tags.every(tag => book.tags.includes(tag))),
       )
     } else {
       setBooks(list)
@@ -38,7 +36,7 @@ const Books = () => {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (
+          {books.map(book => (
             <Book book={book} key={book.repo} />
           ))}
         </tbody>

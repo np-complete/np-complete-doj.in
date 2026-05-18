@@ -1,6 +1,4 @@
-import React from 'react'
 import { createRoot } from 'react-dom/client'
-import Books from './books'
 
 const Main = () => (
   <section className="section">

@@ -1,6 +1,4 @@
-import React from 'react'
 import dateformat from 'dateformat'
-import Tag from './tag'
 
 const Book = ({ book }) => (
   <>
@@ -13,7 +11,7 @@ const Book = ({ book }) => (
             <td rowSpan={book.events.length}>{book.title}</td>
             <td rowSpan={book.events.length}>
               <div className="buttons">
-                {book.tags.map((tag) => (
+                {book.tags.map(tag => (
                   <Tag tag={tag} key={tag} />
                 ))}
               </div>

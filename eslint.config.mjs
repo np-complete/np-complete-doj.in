@@ -1,18 +1,14 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu({
+  typescript: false,
   react: true,
   formatters: true,
   rules: {
     'no-shadow': 'off',
+    'antfu/top-level-function': 'off',
+    'style/brace-style': ['error', '1tbs', { allowSingleLine: true }],
     'react/display-name': 'off',
-    'react/function-component-definition': [
-      'error',
-      {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
-      },
-    ],
     'react/prop-types': 'off',
   },
 })
