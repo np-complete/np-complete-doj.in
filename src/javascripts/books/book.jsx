@@ -2,7 +2,7 @@ import React from 'react'
 import dateformat from 'dateformat'
 import Tag from './tag'
 
-export default ({ book }) => (
+const Book = ({ book }) => (
   <>
     {book.events.map((event, index) => (
       <tr key={event.name}>
@@ -42,3 +42,5 @@ export default ({ book }) => (
     ))}
   </>
 )
+
+export default Book

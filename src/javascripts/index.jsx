@@ -16,6 +16,8 @@ const Main = () => (
   </section>
 )
 
+export default Main
+
 document.addEventListener('DOMContentLoaded', () => {
   const elm = document.querySelector('#mount')
   createRoot(elm).render(<Main />)
