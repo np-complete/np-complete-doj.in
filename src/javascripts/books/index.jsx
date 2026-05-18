@@ -1,25 +1,29 @@
-import React from 'react';
-import Context from './context';
-import Book from './book';
-import list from './list.yml';
+import React from 'react'
+import Context from './context'
+import Book from './book'
+import list from './list.yml'
 
 export default () => {
-  const [books, setBooks] = React.useState(list);
-  const [tags, setTags] = React.useState([]);
+  const [books, setBooks] = React.useState(list)
+  const [tags, setTags] = React.useState([])
 
   const toggleTag = (tag) => {
-    setTags((tags) => (tags.includes(tag) ? tags.filter((x) => x !== tag) : tags.concat(tag)));
-  };
+    setTags((tags) =>
+      tags.includes(tag) ? tags.filter((x) => x !== tag) : tags.concat(tag),
+    )
+  }
 
-  const context = React.useMemo(() => ({ tags, toggleTag }), [tags, toggleTag]);
+  const context = React.useMemo(() => ({ tags, toggleTag }), [tags, toggleTag])
 
   React.useEffect(() => {
     if (tags.length > 0) {
-      setBooks(list.filter((book) => tags.every((tag) => book.tags.includes(tag))));
+      setBooks(
+        list.filter((book) => tags.every((tag) => book.tags.includes(tag))),
+      )
     } else {
-      setBooks(list);
+      setBooks(list)
     }
-  }, [list, tags]);
+  }, [list, tags])
 
   return (
     <Context.Provider value={context}>
@@ -40,5 +44,5 @@ export default () => {
         </tbody>
       </table>
     </Context.Provider>
-  );
-};
+  )
+}

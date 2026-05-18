@@ -9,4 +9,4 @@ module.exports = {
     'prettier/prettier': true,
     'selector-max-id': 1,
   },
-};
+}

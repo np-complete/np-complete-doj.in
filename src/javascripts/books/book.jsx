@@ -1,6 +1,6 @@
-import React from 'react';
-import dateformat from 'dateformat';
-import Tag from './tag';
+import React from 'react'
+import dateformat from 'dateformat'
+import Tag from './tag'
 
 export default ({ book }) => (
   <>
@@ -19,12 +19,20 @@ export default ({ book }) => (
               </div>
             </td>
             <td rowSpan={book.events.length}>
-              <a href={`https://np-complete-books.s3.amazonaws.com/pdf/${book.repo}.pdf`} target="_blank" rel="noreferrer">
+              <a
+                href={`https://np-complete-books.s3.amazonaws.com/pdf/${book.repo}.pdf`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 [pdf]
               </a>
             </td>
             <td rowSpan={book.events.length}>
-              <a href={`https://github.com/np-complete/${book.repo}`} target="_blank" rel="noreferrer">
+              <a
+                href={`https://github.com/np-complete/${book.repo}`}
+                target="_blank"
+                rel="noreferrer"
+              >
                 [source]
               </a>
             </td>
@@ -33,4 +41,4 @@ export default ({ book }) => (
       </tr>
     ))}
   </>
-);
+)
