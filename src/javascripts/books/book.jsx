@@ -1,5 +1,5 @@
-import React from 'react'
 import dateformat from 'dateformat'
+import React from 'react'
 import Tag from './tag'
 
 const Book = ({ book }) => (

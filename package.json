@@ -2,7 +2,9 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "lint": "biome check . && stylelint 'src/**/*.scss'",
+    "lint:fix": "biome check --write . && stylelint --fix 'src/**/*.scss'"
   },
   "dependencies": {
     "classnames": "2.5.1",
@@ -11,19 +13,10 @@
     "react-dom": "19.2.6"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "3.3.5",
-    "@eslint/js": "10.0.1",
+    "@biomejs/biome": "^1.9.4",
     "@modyfi/vite-plugin-yaml": "1.1.1",
     "@vitejs/plugin-react": "6.0.2",
     "bulma": "1.0.4",
-    "eslint": "9.39.4",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-plugin-import": "2.32.0",
-    "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "7.1.1",
-    "globals": "17.6.0",
     "postcss": "8.5.15",
     "prettier": "3.8.3",
     "sass": "1.100.0",
