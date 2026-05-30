@@ -1,17 +1,17 @@
 import React from 'react'
-import Context from './context'
 import Book from './book'
+import Context from './context'
 import list from './list.yml'
 
 const Books = () => {
   const [books, setBooks] = React.useState(list)
   const [tags, setTags] = React.useState([])
 
-  const toggleTag = (tag) => {
+  const toggleTag = React.useCallback((tag) => {
     setTags((tags) =>
       tags.includes(tag) ? tags.filter((x) => x !== tag) : tags.concat(tag),
     )
-  }
+  }, [])
 
   const context = React.useMemo(() => ({ tags, toggleTag }), [tags, toggleTag])
 
@@ -23,7 +23,7 @@ const Books = () => {
     } else {
       setBooks(list)
     }
-  }, [list, tags])
+  }, [tags])
 
   return (
     <Context.Provider value={context}>

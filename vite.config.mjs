@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
 import yaml from '@modyfi/vite-plugin-yaml'
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
 export default defineConfig({
   root: 'src', // Set root to src so index.html is found at /
