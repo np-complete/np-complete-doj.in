@@ -24,6 +24,11 @@
     {
       "matchManagers": ["terraform"],
       "groupName": "terraform"
+    },
+    {
+      "matchPackagePatterns": ["^actions/", "^aws-actions/", "^hashicorp/"],
+      "minimumReleaseAge": null,
+      "automerge": true
     }
   ],
   "vulnerabilityAlerts": {
