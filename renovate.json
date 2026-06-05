@@ -26,9 +26,9 @@
       "groupName": "terraform"
     },
     {
-      "matchPackagePatterns": ["^actions/", "^aws-actions/", "^hashicorp/"],
       "minimumReleaseAge": null,
-      "automerge": true
+      "automerge": true,
+      "matchPackageNames": ["/^actions//", "/^aws-actions//", "/^hashicorp//"]
     }
   ],
   "vulnerabilityAlerts": {
