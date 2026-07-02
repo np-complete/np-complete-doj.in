@@ -17,7 +17,7 @@
     "@modyfi/vite-plugin-yaml": "1.1.1",
     "@vitejs/plugin-react": "6.0.3",
     "bulma": "1.0.4",
-    "postcss": "8.5.15",
+    "postcss": "8.5.16",
     "prettier": "3.9.1",
     "sass": "1.101.0",
     "stylelint": "17.14.0",
