@@ -5,7 +5,8 @@
     ":separateMajorReleases",
     ":combinePatchMinorReleases",
     ":prImmediately",
-    ":label(dependencies)"
+    ":label(dependencies)",
+    ":assignAndReview(masarakki)"
   ],
   "rangeStrategy": "pin",
   "timezone": "Asia/Tokyo",
@@ -33,7 +34,9 @@
   ],
   "vulnerabilityAlerts": {
     "enabled": true,
-    "groupName": "security-updates"
+    "groupName": "security-updates",
+    "minimumReleaseAge": null,
+    "automerge": true
   },
   "lockFileMaintenance": {
     "enabled": true,
