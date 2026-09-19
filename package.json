@@ -13,7 +13,7 @@
     "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.5.13",
+    "@biomejs/biome": "2.5.14",
     "@modyfi/vite-plugin-yaml": "1.1.1",
     "@vitejs/plugin-react": "6.1.1",
     "bulma": "1.0.4",
