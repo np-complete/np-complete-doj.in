@@ -3,10 +3,9 @@ module.exports = {
     'stylelint-config-recommended-scss',
     'stylelint-config-sass-guidelines',
   ],
-  plugins: ['stylelint-order', 'stylelint-prettier'],
+  plugins: ['stylelint-order'],
   rules: {
     'order/properties-alphabetical-order': true,
-    'prettier/prettier': true,
     'selector-max-id': 1,
   },
 }
