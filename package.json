@@ -19,7 +19,7 @@
     "bulma": "1.0.4",
     "postcss": "8.5.31",
     "prettier": "3.9.10",
-    "sass": "1.106.0",
+    "sass": "1.106.1",
     "stylelint": "17.16.0",
     "stylelint-config-recommended-scss": "17.0.1",
     "stylelint-config-sass-guidelines": "13.0.0",
