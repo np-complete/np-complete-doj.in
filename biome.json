@@ -25,6 +25,11 @@
       "semicolons": "asNeeded"
     }
   },
+  "css": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
   "files": {
     "includes": [
       "**",
