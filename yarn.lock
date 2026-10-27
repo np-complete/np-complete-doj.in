@@ -792,10 +792,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dateformat@npm:5.0.4":
-  version: 5.0.4
-  resolution: "dateformat@npm:5.0.4"
-  checksum: 10c0/1d0d164281d11e9b70a0cbe69f1005dbf5a852952402e62e91b86e68a43085e788749240f5b90dec97595a59abb671ed36101c330cbfbeb81f8157c69340e362
+"dateformat@npm:5.0.5":
+  version: 5.0.5
+  resolution: "dateformat@npm:5.0.5"
+  checksum: 10c0/c41d28748e5d64de49fdf627238e4a6b5cd869714ea039e32ffdd3ea4368c9c67bfcefb7fdbfd573d5d32160c29e0b53f5b2ad98f4fe72f9e5131bb52a654ec6
   languageName: node
   linkType: hard
 
@@ -1743,7 +1743,7 @@ __metadata:
     "@vitejs/plugin-react": "npm:6.1.2"
     bulma: "npm:1.0.4"
     classnames: "npm:2.5.1"
-    dateformat: "npm:5.0.4"
+    dateformat: "npm:5.0.5"
     postcss: "npm:8.5.31"
     prettier: "npm:3.9.10"
     react: "npm:19.3.1"
